@@ -73,39 +73,39 @@ body {
 
     .box-portifolio {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr); /* Padrão: 6 colunas */
+        gap: 0.5rem;
         width: 100%;
-        padding: 2.5rem;
+        padding: 0;
         text-align: center;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+        background: transparent;
         backdrop-filter: blur(1px) saturate(100%);
         justify-items: center;
     }
 
     .btn-box-portifolio {
-        background-color: transparent;
+        background-color: #d1d1e0;
         color: #47476b;
         outline: none;
-        padding: 1rem;
+        padding: 2rem;
         font-family: "Reddit Sans Condensed", sans-serif;
-        font-weight: 450;
+        font-weight: 500;
         font-size: 1rem;
         border-radius: 5px;
         border: 1px solid #47476b;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.7s ease, color 0.7s ease;
+        transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease;
         max-width: 20rem;
         margin: 0.5rem auto;
-    }
 
-    & .btn-box-portifolio:hover {
-        background-color: #ff0066;
-        cursor: pointer;
-        color: #d1d1e0;
-        border: none;
+        &:hover {
+            background-color: #ffcccc;
+            cursor: pointer;
+            color: #ff0066;
+            transform: scale(1.05);
+            border: 1px solid #ffcccc;
+        }
     }
 
     .modal {
@@ -130,7 +130,7 @@ body {
     }
 
     .close {
-        color: #730099;
+        color: #ff0066;
         float: right;
         font-size: 20px;
         font-weight: bold;
@@ -150,7 +150,7 @@ body {
         color: #3d3d5c;
         font-family: "Reddit Sans Condensed", sans-serif;
         font-weight: 450;
-        padding-top: 1rem;  
+        padding-top: 1rem;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ff0066;
     }
@@ -189,16 +189,25 @@ body {
     }
 }
 
-// Media queries for responsiveness
-@media (max-width: 1200px) {
+/* Media queries for responsiveness */
+/* 6 colunas para telas grandes */
+@media (min-width: 1201px) {
     .box-portifolio {
-        gap: 1.5rem;
-        padding: 1.5rem;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (max-width: 1024px) {
+/* 3 colunas para telas médias (1200px até 992px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .box-portifolio {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+/* 2 colunas para telas menores (992px até 768px) */
+@media (max-width: 992px) and (min-width: 768px) {
     .container {
         align-items: center;
         justify-content: center;
@@ -214,13 +223,14 @@ body {
     }
 
     .box-portifolio {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         padding: 1.5rem;
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+/* 1 coluna para telas pequenas (768px até 576px) */
+@media (max-width: 768px) and (min-width: 576px) {
     .container {
         align-items: center;
         justify-content: center;
@@ -237,9 +247,9 @@ body {
     }
 
     .box-portifolio {
+        grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;
-        grid-template-columns: 1fr;
     }
 
     video {
@@ -248,9 +258,51 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
-    .box-portifolio {
-        width: 100%;
-        max-width: 1200px;
+/* Ajustes para telas menores (576px até 360px) */
+@media (max-width: 576px) and (min-width: 360px) {
+    .container {
+        padding: 0.5rem;
+        align-items: center;
+    }
+
+    #logo-page {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #sub-logo-page {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+
+    h5, p, li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas (menos de 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0.2rem;
+    }
+
+    #logo-page {
+        font-size: 1.2rem;
+    }
+
+    #sub-logo-page {
+        font-size: 0.8rem;
+    }
+
+    h3, h4 {
+        font-size: 1rem;
+    }
+
+    h5, p, li {
+        font-size: 0.8rem;
     }
 }

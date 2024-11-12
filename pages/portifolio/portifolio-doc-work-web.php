@@ -52,6 +52,16 @@
         <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
         <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
         <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+
+        <div class="btn-box-portifolio" onclick="openModal('modal5')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+
+        <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
         <!-- Adicione mais botões conforme necessário -->
     </div>
 

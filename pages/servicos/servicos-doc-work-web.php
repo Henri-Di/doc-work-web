@@ -43,18 +43,19 @@
         <div class="row">
         <h3>Solicitar Orçamento <i class="fa fa-handshake-o"></i></h3>
 
-            <h4>Dados Empresa</h4>
+            <h4>Dados Empresa <i id="sub-icon-title" class="fa fa-institution"></i></h4>
 
+        <form>
             <table class="table-form-servico-page">
                 <tr class="tr-table-form-servico-page">
                     <td class="td-table-form-servico-page">
                         <label>CNPJ - CPF</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" name="id-empresa" id="input-form-servico-page" placeholder="CNPJ - CPF" required/>
                     </td>
 
                     <td class="td-table-form-servico-page">
                         <label>Nome Fantasia</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" name="nome-empresa" id="input-form-servico-page" placeholder="Nome Fantasia" required/>
                     </td>
                 </tr>
 
@@ -62,13 +63,28 @@
                     <td class="td-table-form-servico-page">
                         <label>Segmento</label>
                         <select>
-                            <option>Alimentação</option>
+                            <option value="Agronegócio">Agronegócio</option>
+                            <option value="Alimentação e Bebidas">Alimentação e Bebidas</option>
+                            <option value="Automotivo">Automotivo</option>
+                            <option value="Comunicação e Marketing">Comunicação e Marketing</option>
+                            <option value="Construção Civil e Imobiliário">Construção Civil e Imobiliário</option>
+                            <option value="Educação e Treinamento">Educação e Treinamento</option>
+                            <option value="Energia e Recursos Naturais">Energia e Recursos Naturais</option>
+                            <option value="Entretenimento e Cultura">Entretenimento e Cultura</option>
+                            <option value="Indústria e Manufatura">Indústria e Manufatura</option>
+                            <option value="Moda e Vestuário">Moda e Vestuário</option>
+                            <option value="Saúde e Bem-Estar">Saúde e Bem-Estar</option>
+                            <option value="Serviços Financeiros">Serviços Financeiros</option>
+                            <option value="Transporte e Logística">Transporte e Logística</option>
+                            <option value="Turismo e Hotelaria">Turismo e Hotelaria</option>
+                            <option value="Varejo e Comércio">Varejo e Comércio</option>
                         </select>
+
                     </td>
                     
                     <td class="td-table-form-servico-page">
                         <label>Endereço</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" id="input-form-servico-page" placeholder="Endenreço" required/>
                     </td>
                     
 
@@ -77,26 +93,12 @@
                 <tr class="tr-table-form-servico-page">
                     <td class="td-table-form-servico-page">
                         <label>Estado</label>
-                        <select>
-                            <option value="">DF</option>
-                            <option value="">DF</option>
-                            <option value="">DF</option>
-                            <option value="">DF</option>
-                            <option value="">DF</option>
-                            <option value="">DF</option>
-                        </select>
+                        <input type="text" id="input-form-servico-page" placeholder="Estado" required/>
                     </td>
 
                     <td class="td-table-form-servico-page">
                         <label>Cidade</label>
-                        <select>
-                            <option value="">Brasília</option>
-                            <option value="">Brasília</option>
-                            <option value="">Brasília</option>
-                            <option value="">Brasília</option>
-                            <option value="">Brasília</option>
-                            <option value="">Brasília</option>
-                        </select>
+                        <input type="text" id="input-form-servico-page" placeholder="Cidade" required/>
                     </td>
 
                     </tr>
@@ -104,12 +106,12 @@
                 <tr class="tr-table-form-servico-page">
                     <td class="td-table-form-servico-page">
                         <label>Telefone 1</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" id="input-form-servico-page" placeholder="Telefone 1" required/>
                     </td>
 
                     <td class="td-table-form-servico-page">
                         <label>Telefone 2</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" id="input-form-servico-page" placeholder="Telefone 2" required/>
                     </td>
 
                     </tr>
@@ -117,17 +119,17 @@
                 <tr class="tr-table-form-servico-page">
                     <td class="td-table-form-servico-page">
                         <label>E-mail</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" id="input-form-servico-page" placeholder="E-mail" required/>
                     </td>
 
                     <td class="td-table-form-servico-page">
                         <label>Rede Social</label>
-                        <input type="text" id="input-form-servico-page" required/>
+                        <input type="text" id="input-form-servico-page" placeholder="Rede social" required/>
                     </td>
                 </tr>
             </table>
 
-            <h4>Dados Aplicação Web</h4>
+            <h4>Dados Aplicação Web <i id="sub-icon-title" class="fa fa-desktop"></i></h4>
 
             <table class="table-form-servico-page">
                 <tr class="tr-table-form-servico-page">
@@ -137,43 +139,9 @@
                     </td>
                 </tr>
             </table>
-
-            <table class="table-form-servico-page">
-
-            <tr class="tr-table-form-servico-page">
-                    <td class="td-table-form-servico-page">
-                        <label>Já possui alguma aplicação web ativa ?</label>
-                        <select>
-                            <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
-                        </selec>
-                    </td>
-
-                    <td class="td-table-form-servico-page">
-                        <label>Se sim, compartilhe o link da aplicação web</label>
-                        <input type="text" id="input-form-servico-page" required/>
-                    </td>
-                </tr>
-
-            <tr class="tr-table-form-servico-page">
-                    <td class="td-table-form-servico-page">
-                        <label>É o primeiro projeto de aplicação web ?</label>
-                        <select>
-                            <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
-                        </selec>
-                    </td>
-
-                    <td class="td-table-form-servico-page">
-                        <label>Qual nivel de prioridade para o projeto estar ativo ?</label>
-                        <select>
-                            <option value="">Alto</option>
-                            <option value="">Médio</option>
-                            <option value="">Baixo</option>
-                        </selec>
-                    </td>
-                </tr>
-            </table>
+            <button type="submit" id="btn-form-servico-page">Solicitar Orçamento <i class="fa fa-handshake-o"></i></button>
+            <button type="reset" id="btn-form-servico-page">Cancelar <i class="fa fa-close"></i></button>
+        </form>
 		</div>
 </div>
 </body>
