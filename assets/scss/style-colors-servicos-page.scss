@@ -133,7 +133,7 @@ body {
         font-size: 1rem;
         color: #47476b;
         border-radius: 3px;
-        border: 1px solid #ff0066;
+        border: 1px solid #47476b;
         background-color: #f0f0f5;
     }
 
@@ -181,18 +181,17 @@ body {
         font-family: "Reddit Sans Condensed", sans-serif;
         font-weight: 500;
         font-size: 1.1rem;
-        color: #ff0066;
+        color: #47476b;
         padding: 0.5rem;
         margin-top: 1rem;
         border-radius: 5px;
-        border: 1px solid #ff0066;
+        border: 1px solid #47476b;
         transition: background-color 0.7s ease;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
 
         &:hover {
             background-color: #ff0066;
             color: #ffffff;
-            opacity: 0.8;
         }
     }
 }

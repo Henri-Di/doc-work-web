@@ -38,7 +38,7 @@
 <body>
 <div class="container">
 	<h1 onclick="window.location.href='../../index.php';" id="logo-page">M&D</h1>
-	<p onclick="window.location.href='../../index.php';" id="sub-logo-page">Matheus Diamanatino - Desenvolvedor Web</p>
+	<p onclick="window.location.href='../../index.php';" id="sub-logo-page">Matheus Diamantino - Desenvolvedor Web</p>
         <br>
         <div class="row">
         <h3>Solicitar Orçamento <i class="fa fa-handshake-o"></i></h3>
@@ -139,8 +139,8 @@
                     </td>
                 </tr>
             </table>
-            <button type="submit" id="btn-form-servico-page">Solicitar Orçamento <i class="fa fa-handshake-o"></i></button>
-            <button type="reset" id="btn-form-servico-page">Cancelar <i class="fa fa-close"></i></button>
+            <button type="submit" id="btn-form-servico-page">Solicitar Orçamento</button>
+            <button type="reset" id="btn-form-servico-page">Cancelar</button>
         </form>
 		</div>
 </div>

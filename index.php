@@ -40,17 +40,17 @@
 	<div class="container">
 		
 		<h1 onclick="window.location.href='./index.php';" id="logo-page">M&D</h1>
-		<p onclick="window.location.href='./index.php';" id="sub-logo-page">Matheus Diamanatino - Desenvolvedor Web</p>
+		<p onclick="window.location.href='./index.php';" id="sub-logo-page">Matheus Diamantino - Desenvolvedor Web</p>
 
 		<div class="row">
 	
 			<div class="col" id="box-info-page">
-			<h4 id="title-box-page">Desenvolvedor Web <i class="fa fa-desktop"></i></h4>
+			<h4 id="title-box-page">Desenvolvedor Web <i class="fa fa-code"></i></h4>
 				<p id="text-box-page">	
 				Desenvolvedor web experiente, especializado em criar aplicações escaláveis, seguras e de alta qualidade, com foco na experiência do usuário e interfaces responsivas. Atende às necessidades dos clientes com atenção aos detalhes e desempenho.
 				</p>
 				<div>
-					<button id="btn-box-page">Sobre o Desenvolvedor <i class="fa fa-desktop"></i></button>
+					<button onclick="window.location.href='./pages/desenvolvedor/desenvolvedor-doc-work-web.php'" id="btn-box-page">Sobre o Desenvolvedor <i class="fa fa-code"></i></button>
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@
 				Utilizo HTML, CSS, SCSS e Bootstrap para criar interfaces responsivas, PHP para lógica de negócios no back-end e JavaScript para interatividade. Gerencio dados com SQL, MySQLi e PostgreSQL, garantindo aplicações web robustas e escaláveis.
 				</p>
 				<div>
-					<button id="btn-box-page">Sobre Tecnologias <i class="fa fa-gears"></i></button>
+					<button onclick="window.location.href='./pages/tecnologias/tecnologias-doc-work-web.php';" id="btn-box-page">Sobre Tecnologias <i class="fa fa-gears"></i></button>
 				</div>
 			</div>
 

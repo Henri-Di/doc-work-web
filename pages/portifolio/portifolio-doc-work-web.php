@@ -39,29 +39,30 @@
 <body>
     <div class="container">
         <h1 onclick="window.location.href='../../index.php';" id="logo-page">M&D</h1>
-        <p onclick="window.location.href='../../index.php';" id="sub-logo-page">Matheus Diamanatino - Desenvolvedor Web</p>
+        <p onclick="window.location.href='../../index.php';" id="sub-logo-page">Matheus Diamantino - Desenvolvedor Web</p>
 
     <div class="box-portifolio">
         <!-- Botões que abrem os modais -->
-        <div class="btn-box-portifolio" onclick="openModal('modal1')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal2')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal4')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal1')">Projeto 1 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal2')">Projeto 2 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeto 3 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeot 4 <i class="fa fa-folder-open"></i></div>
+        
+        <div class="btn-box-portifolio" onclick="openModal('modal1')">Projeto 5 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal2')">Projeto 6 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeto 7 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeot 8 <i class="fa fa-folder-open"></i></div>
+        
+        <div class="btn-box-portifolio" onclick="openModal('modal1')">Projeto 9 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal2')">Projeto 10 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeto 11 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeot 12 <i class="fa fa-folder-open"></i></div>
 
-        <div class="btn-box-portifolio" onclick="openModal('modal5')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-
-        <div class="btn-box-portifolio" onclick="openModal('modal5')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-
-        <div class="btn-box-portifolio" onclick="openModal('modal6')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal7')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
-        <div class="btn-box-portifolio" onclick="openModal('modal8')">Projeto Inventário de Estoque <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal1')">Projeto 13 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal2')">Projeto 14 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeto 15 <i class="fa fa-folder-open"></i></div>
+        <div class="btn-box-portifolio" onclick="openModal('modal3')">Projeot 16 <i class="fa fa-folder-open"></i></div>
+   
         <!-- Adicione mais botões conforme necessário -->
     </div>
 
@@ -100,6 +101,9 @@
                     <source src="../../assets/videos/project-view-1.mp4" type="video/mp4">
                     Seu navegador não suporta a reprodução de vídeos.
                 </video>
+
+                <h5>Repositorio GitHub</h5>
+                <p>Link repositorio:</p>
                 </div>
         </div>
     </div>
@@ -140,6 +144,9 @@
                 <source src="../../assets/videos/project-view-1.mp4" type="video/mp4">
                 Seu navegador não suporta a reprodução de vídeos.
             </video>
+
+            <h5>Repositorio GitHub</h5>
+            <p>Link repositorio:</p>
             </div>
         </div>
     </div>
@@ -180,6 +187,9 @@
                 <source src="../../assets/videos/project-view-1.mp4" type="video/mp4">
                 Seu navegador não suporta a reprodução de vídeos.
             </video>
+
+            <h5>Repositorio GitHub</h5>
+            <p>Link repositorio:</p>
             </div>
         </div>
     </div>
