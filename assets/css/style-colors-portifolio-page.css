@@ -23,7 +23,7 @@ body {
     display: flex; /* Define a exibição como flexbox */
     justify-content: center; /* Alinha os itens no centro horizontal */
     align-items: center; /* Alinha os itens no centro vertical */
-    min-height: 50vh; /* Define a altura mínima como 40% da altura da viewport */
+    min-height: 50vh; /* Define a altura mínima como 50% da altura da viewport */
     overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
@@ -61,12 +61,12 @@ body::before {
 
 /* Estilo do logo principal */
 #logo-page {
-    color: #ffffff; /* Cor branca para o texto */
+    color: #ffffff; /* Define a cor do texto como branco */
     font-size: 3.5rem; /* Tamanho grande da fonte */
     font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
-    font-weight: bold; /* Peso em negrito */
+    font-weight: bold; /* Negrito */
     text-align: left; /* Alinha o texto à esquerda */
-    cursor: pointer; /* Altera o cursor para pointer */
+    cursor: pointer; /* Aponta o cursor no hover */
     margin-bottom: 0.5rem; /* Margem inferior */
     text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
 }
@@ -185,75 +185,166 @@ h3 {
 }
 
 /* ===================================================
-   Responsividade
+   Estilização de Títulos Secundários e Textos
+   =================================================== */
+
+/* Estiliza os títulos de nível 4 */
+h4 {
+    color: #47476b; /* Cor do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 450; /* Peso médio */
+    font-size: 1.5rem; /* Tamanho médio da fonte */
+    text-align: center; /* Centraliza o texto */
+    padding-bottom: 1rem; /* Preenchimento inferior */
+}
+
+/* Estiliza os títulos de nível 5 */
+h5 {
+    color: #3d3d5c; /* Cor do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 450; /* Peso médio */
+    padding-top: 1rem; /* Preenchimento superior */
+    padding-bottom: 0.5rem; /* Preenchimento inferior */
+    border-bottom: 2px solid #3399ff; /* Borda inferior */
+}
+
+/* Estiliza os parágrafos */
+p {
+    color: #3d3d5c; /* Cor do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 450; /* Peso médio */
+    font-size: 1.1rem; /* Tamanho médio da fonte */
+    text-align: justify; /* Justifica o texto */
+}
+
+/* ===================================================
+   Estilização de Listas
+   =================================================== */
+
+/* Estiliza listas não ordenadas */
+ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Aplica um layout flexível */
+    justify-content: left; /* Alinha os itens à esquerda */
+}
+
+/* Estiliza os itens da lista */
+li {
+    color: #3d3d5c; /* Cor do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso médio */
+    font-size: 1rem; /* Tamanho médio da fonte */
+    border-bottom: 2px solid #3399ff; /* Borda inferior */
+    margin: 0 5px; /* Espaçamento entre itens */
+}
+
+/* ===================================================
+   Estilização de Elementos de Vídeo
+   =================================================== */
+
+/* Estiliza elementos de vídeo */
+video {
+    width: 100%; /* Largura total */
+    max-width: 100%; /* Limita a largura máxima */
+    height: auto; /* Ajusta a altura para manter proporção */
+    display: block; /* Exibe como bloco */
+    margin: -0.2rem auto; /* Ajusta margens para centralizar */
+}
+
+/* ===================================================
+   Estilização de Responsividade
    =================================================== */
 
 /* Responsividade para dispositivos grandes (desktops grandes) - largura mínima de 1200px */
 @media (min-width: 1200px) {
     #logo-page {
-        font-size: 3.5rem; /* Tamanho maior para logo */
+        font-size: 3.5rem; /* Aumenta o tamanho da fonte do logo */
     }
     #sub-logo-page {
-        font-size: 1.2rem; /* Ajusta subtítulo */
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte do subtítulo */
     }
 }
 
 /* Para desktops - largura máxima de 1199px e mínima de 992px */
 @media (max-width: 1199px) and (min-width: 992px) {
     #logo-page {
-        font-size: 3rem; /* Reduz tamanho do logo */
+        font-size: 3rem; /* Ajusta o tamanho da fonte do logo */
     }
     #sub-logo-page {
-        font-size: 1.1rem; /* Ajusta subtítulo */
+        font-size: 1.1rem; /* Ajusta o tamanho da fonte do subtítulo */
     }
 }
 
 /* Para tablets e dispositivos médios - largura máxima de 991px e mínima de 768px */
 @media (max-width: 991px) and (min-width: 768px) {
     #logo-page {
-        font-size: 2.5rem; /* Ajusta tamanho do logo */
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte do logo */
         text-align: center; /* Centraliza o logo */
     }
+    #sub-logo-page {
+        font-size: 1rem; /* Ajusta o tamanho da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
     .box-portifolio {
-        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas */
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas em dispositivos médios */
     }
 }
 
 /* Para telas pequenas, como celulares - largura máxima de 767px */
 @media (max-width: 767px) {
+    .container{
+        align-items: center;
+        text-align: center;
+    }
+    #logo-page {
+        font-size: 2rem; /* Ajusta o tamanho da fonte do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
     .box-portifolio {
-        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas */
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para 2 colunas em dispositivos pequenos */
+    }
+    .btn-box-portifolio {
+        font-size: 0.9rem; /* Reduz o tamanho do texto do botão em telas pequenas */
+        padding: 0.8rem; /* Ajusta o preenchimento do botão */
+    }
+}
+
+/* Para telas menores que 575px */
+@media (max-width: 575px) {
+    #logo-page {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    .modal-content {
+        width: 90%; /* Ajusta a largura do modal para caber melhor em telas pequenas */
+        margin: 20% auto; /* Ajusta a margem para manter o modal centrado */
     }
 }
 
 /* Para telas muito pequenas, como celulares antigos - largura máxima de 359px */
 @media (max-width: 359px) {
-    .container {
-        padding: 0.8rem; /* Ajusta o preenchimento */
-        align-items: center; /* Centraliza o conteúdo */
-    }
     #logo-page {
-        font-size: 1.5rem; /* Ajusta tamanho do logo */
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte do logo para telas menores */
         text-align: center; /* Centraliza o logo */
     }
     #sub-logo-page {
-        font-size: 0.7rem; /* Ajusta tamanho do subtítulo */
+        font-size: 0.7rem; /* Ajusta o tamanho da fonte do subtítulo para telas pequenas */
         text-align: center; /* Centraliza o subtítulo */
     }
-    .box-portifolio {
-        grid-template-columns: repeat(1, 1fr); /* Ajusta para 1 coluna */
-        gap: 0.5rem; /* Ajusta o espaçamento */
-    }
-    .btn-box-portifolio {
-        font-size: 0.85rem; /* Reduz o tamanho do botão */
-        padding: 0.7rem; /* Ajusta o preenchimento do botão */
+    h3, h4, h5 {
+        font-size: 1rem; /* Reduz o tamanho dos títulos para melhor visualização em telas muito pequenas */
     }
     p {
-        font-size: 0.8rem; /* Reduz tamanho do texto dos parágrafos */
-    }
-    .modal-content {
-        padding: 10px; /* Ajusta o preenchimento do modal */
-        margin: 15% auto; /* Ajusta a margem do modal */
-        width: 90%; /* Ajusta a largura para telas menores */
+        font-size: 0.9rem; /* Reduz o tamanho do texto dos parágrafos */
     }
 }
