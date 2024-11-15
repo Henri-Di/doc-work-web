@@ -146,96 +146,25 @@
                 </video>
 
                 <h5>Repositorio GitHub</h5>
-                <p>Link repositorio:</p>
+                <p>Link repositorio: https://github.com/Henri-Di/sistema-inventario</p>
                 </div>
         </div>
     </div>
 
-
-
-    <div id="modal2" class="modal">
+    <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <!-- <p>Conteúdo do Modal 2</p> -->
-            <h4>Projeto - Inventário de Material <i class="fa fa-cubes"></i></h4>
-            
-            <h5>Escopo</h5>
-            
-            <p>O sistema de gestão de estoque foi projetado para controlar eficientemente as operações de inventário em ambientes corporativos, com funcionalidades de autenticação, autorização e auditoria para garantir segurança e rastreabilidade.
-            Ele permite o registro detalhado de entradas, saídas, reservas, transferências, devoluções e inutilizações de materiais, assegurando que as quantidades disponíveis sejam rigorosamente monitoradas para evitar inconsistências no estoque.<br><br>
-            Usuários têm acesso controlado por permissões, e todas as ações são registradas em logs de auditoria. Transferências entre datacenters são notificadas em tempo real, e o sistema valida cada operação para garantir que o estoque disponível
-            seja suficiente. Com suporte a dispositivos móveis e navegadores populares, o sistema oferece escalabilidade, alta disponibilidade e uma interface intuitiva que facilita a navegação. 
-            </p>
-            
-            <h5>Tecnologias</h5>
-
-            <p>
-                <ul>
-                    <li>HTML</li>
-                    <li>SCSS</li>
-                    <li>BOOTSTRAP</li>
-                    <li>PHP</li>
-                    <li>JAVASCRIPT</li>
-                    <li>MYSQLI</li>
-                </ul>
-            </p>
-
-            <h5>Aplicação Web</h5>
-            
-            <div class="container-video">
-            <video width="370" height="270" controls>
-                <source src="../../assets/videos/project-view-1.mp4" type="video/mp4">
-                Seu navegador não suporta a reprodução de vídeos.
-            </video>
-
-            <h5>Repositorio GitHub</h5>
-            <p>Link repositorio:</p>
-            </div>
+            <p>Conteúdo do Modal 2</p>
         </div>
     </div>
-    
 
-
-    <div id="modal3" class="modal">
+    <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-           <!-- <p>Conteúdo do Modal 3</p> -->
-            <h4>Projeto - Inventário de Material <i class="fa fa-cubes"></i></h4>
-            
-            <h5>Escopo</h5>
-            
-            <p>O sistema de gestão de estoque foi projetado para controlar eficientemente as operações de inventário em ambientes corporativos, com funcionalidades de autenticação, autorização e auditoria para garantir segurança e rastreabilidade.
-            Ele permite o registro detalhado de entradas, saídas, reservas, transferências, devoluções e inutilizações de materiais, assegurando que as quantidades disponíveis sejam rigorosamente monitoradas para evitar inconsistências no estoque.<br><br>
-            Usuários têm acesso controlado por permissões, e todas as ações são registradas em logs de auditoria. Transferências entre datacenters são notificadas em tempo real, e o sistema valida cada operação para garantir que o estoque disponível
-            seja suficiente. Com suporte a dispositivos móveis e navegadores populares, o sistema oferece escalabilidade, alta disponibilidade e uma interface intuitiva que facilita a navegação. 
-            </p>
-            
-            <h5>Tecnologias</h5>
-
-            <p>
-                <ul>
-                    <li>HTML</li>
-                    <li>SCSS</li>
-                    <li>BOOTSTRAP</li>
-                    <li>PHP</li>
-                    <li>JAVASCRIPT</li>
-                    <li>MYSQLI</li>
-                </ul>
-            </p>
-
-            <h5>Aplicação Web</h5>
-            
-            <div class="container-video">
-            <video width="370" height="270" controls>
-                <source src="../../assets/videos/project-view-1.mp4" type="video/mp4">
-                Seu navegador não suporta a reprodução de vídeos.
-            </video>
-
-            <h5>Repositorio GitHub</h5>
-            <p>Link repositorio:</p>
-            </div>
+            <p>Conteúdo do Modal 3</p>
         </div>
     </div>
+
 
     <div id="modal4" class="modal">
         <div class="modal-content">
