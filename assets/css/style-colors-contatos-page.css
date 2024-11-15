@@ -1,0 +1,275 @@
+/* ===================================================
+   Reset Básico e Estilo do Body
+   =================================================== */
+
+/* Reset básico para eliminar margens e espaçamentos padrões de todos os elementos */
+* {
+  margin: 0; /* Remove margens de todos os elementos */
+  padding: 0; /* Remove preenchimentos de todos os elementos */
+  box-sizing: border-box; /* Inclui o padding e borda no tamanho total do elemento */
+}
+
+/* Estilo do body com imagem de fundo e centralização do conteúdo */
+body {
+  background-image: url('../../assets/images/background-index-4.jpg'); /* Imagem de fundo */
+  background-size: cover; /* A imagem cobre toda a área visível */
+  background-position: center; /* Centraliza a imagem no body */
+  background-attachment: fixed; /* Imagem de fundo permanece fixa ao rolar */
+  background-repeat: no-repeat; /* Impede repetição da imagem de fundo */
+  display: flex; /* Flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  min-height: 50vh; /* Altura mínima de 40% da altura da janela */
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Sobreposição sutil para ajustar contraste e brilho da imagem de fundo */
+body::before {
+  content: ""; /* Cria um pseudo-elemento vazio para sobreposição */
+  position: fixed; /* Posição fixa */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total da tela */
+  height: 100%; /* Altura total da tela */
+  background: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
+  z-index: -1; /* Coloca a sobreposição atrás do conteúdo principal */
+  filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Aumenta contraste, brilho e saturação */
+}
+
+/* ===================================================
+   Container Principal
+   =================================================== */
+
+.container {
+  width: 90%; /* A largura do container será 90% da largura da tela */
+  max-width: 1200px; /* Limita a largura máxima do container */
+  padding: 2rem; /* Preenchimento interno de 2rem */
+  display: flex; /* Usa flexbox para o layout */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens à esquerda */
+}
+
+/* ===================================================
+   Estilização do Logo e Subtítulo
+   =================================================== */
+
+#logo-page {
+  color: #ffffff; /* Cor do logo */
+  font-size: 3.5rem; /* Tamanho da fonte do logo */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Peso em negrito */
+  text-align: center; /* Alinhamento à esquerda */
+  cursor: pointer; /* Cursor de ponteiro para interatividade */
+  margin-bottom: 0.5rem; /* Margem inferior */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+}
+
+#sub-logo-page {
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: 450; /* Peso médio */
+  color: #ffffff; /* Cor do texto */
+  text-align: center; /* Alinhamento à esquerda */
+  cursor: pointer; /* Cursor de ponteiro */
+  padding-bottom: 0.5rem; /* Preenchimento inferior */
+  border-bottom: 2px solid #ffffff; /* Borda inferior */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+  margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* ===================================================
+   Configuração da Linha de Caixas de Informação
+   =================================================== */
+
+.row {
+  display: flex; /* Flexbox para layout das caixas */
+  flex-wrap: wrap; /* Permite que itens "quebrem" para próxima linha em telas menores */
+  justify-content: space-around; /* Espaçamento igual entre os itens */
+  gap: 2rem; /* Espaçamento entre os itens */
+  width: 100%; /* Largura total */
+  padding: 0; /* Remove padding adicional */
+  border-radius: 15px; /* Bordas arredondadas */
+  margin-top: 1rem; /* Margem superior */
+  background: transparent; /* Fundo transparente */
+  backdrop-filter: blur(1px) saturate(100%); /* Efeito de desfoque e saturação */
+}
+
+/* ===================================================
+   Configuração das Caixas de Informação
+   =================================================== */
+
+#box-info-page {
+  flex: 1 1 10%; /* Cada caixa ocupa 10% da largura disponível */
+  background-color: #ffffff; /* Fundo branco */
+  color: #47476b; /* Cor do texto */
+  padding: 2rem; /* Preenchimento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.7s ease; /* Transição suave para interações */
+}
+
+#box-info-page:hover {
+  background-color: #f2f2f2; /* Fundo cinza claro no hover */
+  cursor: pointer; /* Cursor de ponteiro */
+  color: #47476b; /* Cor do texto no hover */
+  transform: scale(1.07); /* Aumenta ligeiramente o tamanho no hover */
+}
+
+/* ===================================================
+   Estilo do Título das Caixas de Informação
+   =================================================== */
+
+h4 {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Negrito */
+  padding-bottom: 1rem; /* Preenchimento inferior */
+}
+
+/* ===================================================
+   Estilo para Ícones de Contato
+   =================================================== */
+
+#icon-contatos-page {
+  font-size: 3.5rem; /* Tamanho do ícone */
+}
+
+/* ===================================================
+   Configurações de Responsividade
+   =================================================== */
+
+/* Dispositivos grandes - largura mínima de 1200px */
+@media (min-width: 1200px) {
+  #logo-page {
+    font-size: 3.5rem; /* Fonte grande */
+  }
+  #sub-logo-page {
+    font-size: 1.2rem; /* Fonte do subtítulo */
+  }
+  .row {
+    gap: 2rem; /* Espaçamento entre itens */
+  }
+  #box-info-page {
+    flex: 1 1 20%; /* Cada caixa ocupa 20% */
+  }
+  #btn-box-page {
+    max-width: 250px; /* Largura máxima do botão */
+  }
+}
+
+/* Desktops médios - largura entre 992px e 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+  #logo-page {
+    font-size: 3rem;
+  }
+  #sub-logo-page {
+    font-size: 1.1rem;
+  }
+  .row {
+    gap: 1.5rem;
+  }
+  #box-info-page {
+    flex: 1 1 20%;
+    max-width: 20%;
+  }
+  #btn-box-page {
+    max-width: 220px;
+  }
+}
+
+/* Tablets e dispositivos médios - largura entre 768px e 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+  #logo-page {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  #sub-logo-page {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #box-info-page {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  #btn-box-page {
+    max-width: 200px;
+  }
+}
+
+/* Telas pequenas, como celulares - largura máxima de 767px */
+@media (max-width: 767px) {
+  .container {
+    align-items: center;
+    text-align: center;
+  }
+  #logo-page {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #sub-logo-page {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #box-info-page {
+    flex: 1 1 90%;
+    max-width: 100%;
+  }
+  #btn-box-page {
+    max-width: 150px;
+  }
+}
+
+/* Telas menores que 575px */
+@media (max-width: 575px) {
+  #logo-page {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  #sub-logo-page {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #box-info-page {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  #btn-box-page {
+    max-width: 130px;
+  }
+}
+
+/* Telas extremamente pequenas - largura máxima de 359px */
+@media (max-width: 359px) {
+  #logo-page {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #sub-logo-page {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #box-info-page {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  #btn-box-page {
+    max-width: 120px;
+  }
+}

@@ -1,0 +1,425 @@
+/* ===================================================
+   Estilos Globais
+   =================================================== */
+
+/* Reset de margens e preenchimentos, e definição do box-sizing para facilitar o controle dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   Estilo para o Body
+   =================================================== */
+
+body {
+    /* Definição da imagem de fundo com caminho relativo */
+    background-image: url('../../assets/images/background-index-4.jpg');
+    background-size: cover; /* A imagem cobre toda a área do body */
+    background-position: center; /* Centraliza a imagem no body */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    
+    /* Flexbox para centralizar o conteúdo horizontal e verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da janela */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+/* Filtro de sobrecarga no background para aumentar contraste, brilho e saturação */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Cor de sobrecarga semi-transparente */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+    filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Aumenta contraste, brilho e saturação da imagem de fundo */
+}
+
+/* ===================================================
+   Container Centralizado
+   =================================================== */
+
+.container {
+    width: 90%; /* Largura relativa para adaptação */
+    max-width: 800px; /* Limita a largura máxima */
+    padding: 2rem; /* Espaçamento interno */
+    
+    /* Flexbox para organização dos elementos em coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens à esquerda */
+    gap: 0rem; /* Espaçamento entre os elementos */
+    
+    /* Adiciona um fundo semi-transparente e borda arredondada para melhor visibilidade */
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* ===================================================
+   Estilo do Logo
+   =================================================== */
+
+#logo-page {
+    color: #ffffff; /* Cor branca para o texto */
+    font-size: 3.5rem; /* Tamanho da fonte */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Alinhamento à esquerda */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do logo */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+/* Sub-logo com borda inferior */
+#sub-logo-page {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: 450; /* Peso da fonte */
+    color: #ffffff; /* Cor branca para o texto */
+    text-align: center; /* Alinhamento à esquerda */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    padding-bottom: 0.5rem; /* Espaçamento interno inferior */
+    border-bottom: 2px solid #ffffff; /* Borda inferior */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    margin-bottom: 1rem; /* Espaçamento abaixo do sub-logo */
+}
+
+/* ===================================================
+   Estilo para a Linha do Formulário
+   =================================================== */
+
+.row {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 0.5rem; /* Espaçamento entre os elementos */
+    width: 100%; /* Ocupa 100% da largura do container */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    background: #ffffff; /* Fundo branco */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+    backdrop-filter: blur(5px); /* Desfoque de fundo para efeito de vidro fosco */
+    overflow: hidden; /* Oculta conteúdos que excedem o container */
+}
+
+/* ===================================================
+   Estilos de Cabeçalhos
+   =================================================== */
+
+h3 {
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    text-align: center; /* Alinhamento centralizado */
+    padding-bottom: 0.5rem; /* Espaçamento inferior */
+}
+
+h4 {
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    padding: 0.5rem 0; /* Espaçamento vertical */
+    border-bottom: 2px solid #47476b; /* Borda inferior */
+}
+
+/* ===================================================
+   Estilos para os Elementos da Tabela do Formulário
+   =================================================== */
+
+.table-form-servico-page {
+    width: 100%; /* Ocupa 100% da largura do container */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    max-width: 100vw; /* Limita a largura máxima à largura da janela de visualização */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco */
+}
+
+.tr-table-form-servico-page {
+    display: table-row; /* Define o elemento como uma linha de tabela */
+}
+
+.td-table-form-servico-page {
+    padding: 1rem; /* Espaçamento interno */
+    width: 63.5vw; /* Largura relativa */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    text-align: center; /* Alinhamento centralizado */
+    background-color: #ffffff; /* Fundo branco */
+}
+
+/* ===================================================
+   Estilos para Labels e Inputs
+   =================================================== */
+
+label {
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
+    padding: 0.3rem; /* Espaçamento interno */
+    text-align: center; /* Alinhamento centralizado */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    border-radius: 3px; /* Bordas arredondadas */
+    border: 1px solid #47476b; /* Borda sólida */
+    background-color: #f0f0f5; /* Fundo cinza claro */
+}
+
+#input-form-servico-page {
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
+    outline: none; /* Remove a borda de foco padrão */
+    padding: 0.3rem; /* Espaçamento interno */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    text-align: center; /* Alinhamento centralizado */
+    border: 1px solid #47476b; /* Borda sólida */
+    background-color: transparent; /* Fundo transparente */
+}
+
+select {
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
+    outline: none; /* Remove a borda de foco padrão */
+    padding: 0.2rem; /* Espaçamento interno */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+    text-align: center; /* Alinhamento centralizado */
+    border: 1px solid #47476b; /* Borda sólida */
+    background-color: transparent; /* Fundo transparente */
+}
+
+textarea {
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
+    height: 20vh; /* Altura relativa à altura da janela de visualização */
+    outline: none; /* Remove a borda de foco padrão */
+    padding: 1rem; /* Espaçamento interno */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    text-align: justify; /* Alinhamento justificado */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #47476b; /* Borda sólida */
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* ===================================================
+   Estilos para o Botão do Formulário
+   =================================================== */
+
+#btn-form-servico-page {
+    background-color: transparent; /* Fundo transparente */
+    outline: none; /* Remove a borda de foco padrão */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    margin-top: 1rem; /* Espaçamento acima do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #47476b; /* Borda sólida */
+    transition: background-color 0.7s ease; /* Transições suaves para interações */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+}
+
+#btn-form-servico-page:hover {
+    background-color: #3399ff; /* Fundo vermelho claro ao passar o mouse */
+    color: #ffffff; /* Cor do texto permanece */
+    border: 1px solid #3399ff; /* Borda sólida */
+}
+
+/* ===================================================
+   Estilo para Ícones de Subtítulo
+   =================================================== */
+
+#sub-icon-title {
+    font-size: 1.3rem; /* Tamanho da fonte do ícone */
+}
+
+/* ===================================================
+   Responsividade para Dispositivos Grandes (Desktops Grandes)
+   =================================================== */
+@media (min-width: 1200px) {
+    #logo-page {
+        font-size: 3.5rem; /* Mantém o tamanho grande da fonte do logo */
+    }
+    #sub-logo-page {
+        font-size: 1.2rem; /* Mantém o tamanho da fonte do subtítulo */
+    }
+    
+    .container {
+        padding: 3rem; /* Aumenta o espaçamento interno do container */
+    }
+    
+    .row {
+        padding: 3rem; /* Aumenta o espaçamento interno do formulário */
+    }
+}
+
+/* ===================================================
+   Responsividade para Desktops Médios
+   =================================================== */
+@media (max-width: 1199px) and (min-width: 992px) {
+    #logo-page {
+        font-size: 3rem; /* Reduz ligeiramente o tamanho da fonte do logo */
+    }
+    #sub-logo-page {
+        font-size: 1.1rem; /* Reduz o tamanho da fonte do subtítulo */
+    }
+    
+    .container {
+        padding: 2.5rem; /* Ajusta o espaçamento interno */
+    }
+    
+    .row {
+        padding: 2.5rem; /* Ajusta o espaçamento interno do formulário */
+    }
+}
+
+/* ===================================================
+   Responsividade para Tablets e Dispositivos Médios
+   =================================================== */
+@media (max-width: 991px) and (min-width: 768px) {
+    #logo-page {
+        font-size: 2.5rem; /* Reduz o tamanho da fonte do logo para melhor adaptação */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 1rem; /* Reduz o tamanho da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    
+    .container {
+        padding: 2rem; /* Ajusta o espaçamento interno */
+    }
+    
+    .row {
+        padding: 2rem; /* Ajusta o espaçamento interno do formulário */
+    }
+}
+
+/* ===================================================
+   Responsividade para Telas Pequenas (Celulares)
+   =================================================== */
+@media (max-width: 767px) {
+    .container{
+        align-items: center;
+        text-align: center;
+       gap: 0;
+    }
+    #logo-page {
+        font-size: 2rem; /* Reduz o tamanho da fonte do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    
+    .container {
+        padding: 1.5rem; /* Reduz o espaçamento interno para telas menores */
+    }
+    
+    .row {
+        padding: 1.5rem; /* Reduz o espaçamento interno do formulário */
+    }
+    
+    /* Ajusta o padding das células da tabela do formulário */
+    .td-table-form-servico-page {
+        padding: 0.8rem; /* Reduz o espaçamento interno */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte para melhor legibilidade */
+    }
+}
+
+/* ===================================================
+   Responsividade para Telas Muito Pequenas (Celulares Antigos)
+   =================================================== */
+@media (max-width: 575px) {
+    #logo-page {
+        font-size: 1.8rem; /* Reduz ainda mais o tamanho da fonte do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Mantém o tamanho reduzido da fonte do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    
+    .container {
+        padding: 1rem; /* Reduz significativamente o espaçamento interno */
+    }
+    
+    .row {
+        padding: 1rem; /* Reduz significativamente o espaçamento interno do formulário */
+    }
+    
+    /* Ajusta o padding das células da tabela do formulário */
+    .td-table-form-servico-page {
+        padding: 0.6rem; /* Reduz ainda mais o espaçamento interno */
+        font-size: 0.85rem; /* Reduz o tamanho da fonte para melhor adaptação */
+    }
+}
+
+/* ===================================================
+   Responsividade para Telas Extremamente Pequenas (Celulares Muito Antigos)
+   =================================================== */
+@media (max-width: 359px) {
+    #logo-page {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do logo para telas muito pequenas */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.7rem; /* Reduz o tamanho da fonte do subtítulo para telas muito pequenas */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    
+    .container {
+        padding: 0.8rem; /* Minimiza o espaçamento interno */
+    }
+    
+    .row {
+        padding: 0.8rem; /* Minimiza o espaçamento interno do formulário */
+    }
+    
+    /* Ajusta o padding das células da tabela do formulário */
+    .td-table-form-servico-page {
+        padding: 0.4rem; /* Minimiza o espaçamento interno */
+        font-size: 0.75rem; /* Reduz o tamanho da fonte para telas muito pequenas */
+    }
+}
+
+/* ===================================================
+   Estilos Adicionais para Melhorar a Responsividade
+   =================================================== */
+
+/* Tornar imagens e vídeos responsivos */
+img, video {
+    max-width: 100%; /* Impede que excedam a largura do contêiner */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Responsividade para botões */
+button, #btn-form-servico-page {
+    width: 100%; /* Faz o botão ocupar toda a largura disponível em telas pequenas */
+    max-width: 120px; /* Limita a largura máxima do botão */
+    margin: 0.5rem auto; /* Centraliza o botão horizontalmente */
+}
+
+/* Ajustes nos inputs para telas pequenas */
+input, select, textarea {
+    font-size: 1.1rem; /* Garante legibilidade */
+    padding: 0.5rem; /* Espaçamento interno adequado */
+}
+
+/* ===================================================
+   Fim dos Estilos CSS
+   =================================================== */

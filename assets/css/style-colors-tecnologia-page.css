@@ -1,0 +1,252 @@
+/* ===================================================
+   Estilos Globais
+   =================================================== */
+
+/* Reset de margens e preenchimentos, e definição do box-sizing para facilitar o controle dos elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================================
+   Estilo para o Body
+   =================================================== */
+
+body {
+  /* Definição da imagem de fundo com caminho relativo */
+  background-image: url('../../assets/images/background-index-4.jpg');
+  background-size: cover; /* A imagem cobre toda a área do body */
+  background-position: center; /* Centraliza a imagem no body */
+  background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+
+  /* Flexbox para centralizar o conteúdo horizontal e verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 50vh; /* Garante que o body ocupe pelo menos 100% da altura da janela */
+  overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+/* Filtro de sobrecarga no background para aumentar contraste, brilho e saturação */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Cor de sobrecarga semi-transparente */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+  filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Aumenta contraste, brilho e saturação da imagem de fundo */
+}
+
+/* ===================================================
+   Container Centralizado
+   =================================================== */
+
+.container {
+  width: 90%; /* Largura relativa para adaptação */
+  max-width: 1200px; /* Limita a largura máxima */
+  padding: 2rem; /* Espaçamento interno */
+
+  /* Flexbox para organização dos elementos em coluna */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinha os itens à esquerda */
+}
+
+/* ===================================================
+   Estilo do Logo
+   =================================================== */
+
+#logo-page {
+  color: #ffffff; /* Cor branca para o texto */
+  font-size: 3.5rem; /* Tamanho da fonte */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Negrito */
+  text-align: center; /* Alinhamento à esquerda */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do logo */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+/* Sub-logo com borda inferior */
+#sub-logo-page {
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: 450; /* Peso da fonte */
+  color: #ffffff; /* Cor branca para o texto */
+  text-align: center; /* Alinhamento à esquerda */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  padding-bottom: 0.5rem; /* Espaçamento interno inferior */
+  border-bottom: 2px solid #ffffff; /* Borda inferior */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+  margin-bottom: 1rem; /* Espaçamento abaixo do sub-logo */
+}
+
+/* ===================================================
+   Estilo para a Linha do Formulário
+   =================================================== */
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens "quebrem" para a linha seguinte em telas pequenas */
+  justify-content: space-between; /* Espaçamento igual entre os itens */
+  gap: 2rem; /* Espaçamento entre os elementos */
+  width: 100%; /* Ocupa 100% da largura do container */
+  padding: 0; /* Remove o padding adicional */
+  border-radius: 15px; /* Bordas arredondadas */
+  margin-top: 1rem; /* Espaçamento acima da linha */
+  background: transparent; /* Fundo transparente */
+  backdrop-filter: blur(1px) saturate(100%); /* Desfoque de fundo e saturação */
+}
+
+/* ===================================================
+   Estilo do Box de Informação
+   =================================================== */
+
+#box-info-page {
+  flex: 1 1 calc(10% - 1rem); /* 50% de largura menos o gap, responsivo */
+  background-color: #ffffff; /* Fundo branco */
+  color: #47476b; /* Cor do texto */
+  padding: 0; /* Remove o padding extra */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transições suaves para interatividade */
+}
+
+#box-info-page:hover {
+  background-color: #f2f2f2; /* Fundo cinza claro ao passar o mouse */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  color: #47476b; /* Cor do texto */
+}
+
+/* ===================================================
+   Estilos de Cabeçalhos
+   =================================================== */
+
+h4 {
+  font-size: 1.5rem; /* Tamanho da fonte do cabeçalho */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Negrito */
+}
+
+/* ===================================================
+   Estilo da Imagem de Tecnologias
+   =================================================== */
+
+#image-tecnologias-page {
+  width: 100px; /* Largura fixa */
+  height: auto; /* Altura proporcional */
+  margin-top: 10px; /* Espaçamento superior */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para hover */
+}
+
+#image-tecnologias-page:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente a imagem no hover */
+}
+
+/* ===================================================
+   Responsividade para Dispositivos Grandes (Desktops Grandes)
+   =================================================== */
+
+@media (min-width: 1200px) {
+  #logo-page {
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte do logo */
+  }
+  #sub-logo-page {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte do subtítulo */
+  }
+}
+
+/* ===================================================
+   Responsividade para Desktops Médios
+   =================================================== */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #logo-page {
+    font-size: 3rem; /* Ajusta o tamanho da fonte do logo */
+  }
+  #sub-logo-page {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte do subtítulo */
+  }
+}
+
+/* ===================================================
+   Responsividade para Tablets e Dispositivos Médios
+   =================================================== */
+
+@media (max-width: 991px) and (min-width: 768px) {
+  #logo-page {
+    font-size: 2.5rem; /* Ajusta o tamanho da fonte do logo */
+    text-align: center; /* Centraliza o logo */
+  }
+  #sub-logo-page {
+    font-size: 1rem; /* Ajusta o tamanho da fonte do subtítulo */
+    text-align: center; /* Centraliza o subtítulo */
+  }
+}
+
+/* ===================================================
+   Responsividade para Telas Pequenas (Celulares)
+   =================================================== */
+
+   @media (max-width: 767px) {
+    .container {
+      align-items: center;
+      text-align: center;
+    }
+    #logo-page {
+      font-size: 2rem;
+      text-align: center;
+    }
+    #sub-logo-page {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Ajusta o box-info-page para ocupar 100% da largura em telas pequenas */
+    #box-info-page {
+      flex: 1 1 100%; /* 100% da largura, 1 por linha */
+    }
+  }
+  
+  /* ===================================================
+     Responsividade para Telas Muito Pequenas (Celulares Antigos)
+     =================================================== */
+  
+  @media (max-width: 575px) {
+    #logo-page {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    #sub-logo-page {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    #box-info-page {
+      flex: 1 1 100%; /* Ocupa 100% da largura em telas muito pequenas */
+    }
+  }
+  
+  /* ===================================================
+     Responsividade para Telas Extremamente Pequenas
+     =================================================== */
+  
+  @media (max-width: 359px) {
+    #logo-page {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    #sub-logo-page {
+      font-size: 0.7rem;
+      text-align: center;
+    }
+    #box-info-page {
+      flex: 1 1 100%; /* Ocupa 100% da largura em telas muito pequenas */
+    }
+  }

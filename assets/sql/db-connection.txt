@@ -1,0 +1,33 @@
+-- Cria o banco de dados `portfolio` (caso ele ainda não exista)
+CREATE DATABASE IF NOT EXISTS portfolio;
+
+-- Seleciona o banco de dados `portfolio` para que as próximas operações ocorram nele
+USE portfolio;
+
+CREATE TABLE IF NOT EXISTS solicitacoes_orcamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cnpj_cpf VARCHAR(14) NOT NULL,
+    nome_fantasia VARCHAR(255) NOT NULL,
+    segmento VARCHAR(255) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    estado VARCHAR(100) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    telefone1 VARCHAR(20) NOT NULL,
+    telefone2 VARCHAR(20),
+    email VARCHAR(255) NOT NULL,
+    rede_social VARCHAR(255),
+    detalhes_projeto TEXT NOT NULL,
+    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Cria a tabela `short_urls` para armazenar URLs encurtadas e suas informações associadas
+CREATE TABLE IF NOT EXISTS short_urls (
+    id INT AUTO_INCREMENT PRIMARY KEY,                 -- ID único para cada URL encurtada
+    code VARCHAR(10) NOT NULL UNIQUE,                  -- Código curto único gerado para a URL
+    original_url TEXT NOT NULL,                        -- URL original completa
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP     -- Data e hora de criação do registro
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Comentários:
+-- - `ENGINE=InnoDB`: Define o mecanismo de armazenamento como InnoDB, que oferece suporte a transações e integridade referencial.
+-- - `DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`: Define a tabela para usar o charset UTF-8 com suporte a caracteres Unicode, permitindo o armazenamento de caracteres especiais e emojis.
