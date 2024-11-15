@@ -1,33 +1,34 @@
--- Cria o banco de dados `portfolio` (caso ele ainda não exista)
+-- Cria o banco de dados `portfolio` caso ele ainda não exista
 CREATE DATABASE IF NOT EXISTS portfolio;
 
 -- Seleciona o banco de dados `portfolio` para que as próximas operações ocorram nele
 USE portfolio;
 
+-- Criação da tabela `solicitacoes_orcamento` para armazenar informações sobre solicitações de orçamento
 CREATE TABLE IF NOT EXISTS solicitacoes_orcamento (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cnpj_cpf VARCHAR(14) NOT NULL,
-    nome_fantasia VARCHAR(255) NOT NULL,
-    segmento VARCHAR(255) NOT NULL,
-    endereco VARCHAR(255) NOT NULL,
-    estado VARCHAR(100) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    telefone1 VARCHAR(20) NOT NULL,
-    telefone2 VARCHAR(20),
-    email VARCHAR(255) NOT NULL,
-    rede_social VARCHAR(255),
-    detalhes_projeto TEXT NOT NULL,
-    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Cria a tabela `short_urls` para armazenar URLs encurtadas e suas informações associadas
-CREATE TABLE IF NOT EXISTS short_urls (
-    id INT AUTO_INCREMENT PRIMARY KEY,                 -- ID único para cada URL encurtada
-    code VARCHAR(10) NOT NULL UNIQUE,                  -- Código curto único gerado para a URL
-    original_url TEXT NOT NULL,                        -- URL original completa
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP     -- Data e hora de criação do registro
+    id INT AUTO_INCREMENT PRIMARY KEY,           -- ID único para cada solicitação, com incremento automático
+    cnpj_cpf VARCHAR(14) NOT NULL,               -- CNPJ ou CPF do solicitante (máximo 14 caracteres)
+    nome_fantasia VARCHAR(255) NOT NULL,         -- Nome fantasia ou nome do solicitante
+    segmento VARCHAR(255) NOT NULL,              -- Segmento de atuação do solicitante
+    endereco VARCHAR(255) NOT NULL,              -- Endereço completo do solicitante
+    estado VARCHAR(100) NOT NULL,                -- Estado onde o solicitante está localizado
+    cidade VARCHAR(100) NOT NULL,                -- Cidade onde o solicitante está localizado
+    telefone1 VARCHAR(20) NOT NULL,              -- Telefone principal do solicitante
+    telefone2 VARCHAR(20),                       -- Telefone secundário do solicitante (opcional)
+    email VARCHAR(255) NOT NULL,                 -- Endereço de e-mail do solicitante
+    rede_social VARCHAR(255),                    -- Link ou nome da rede social do solicitante (opcional)
+    detalhes_projeto TEXT NOT NULL,              -- Detalhes do projeto descritos pelo solicitante
+    data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Data e hora de criação da solicitação, padrão atual
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Comentários:
+-- Criação da tabela `short_urls` para armazenar URLs encurtadas e suas informações associadas
+CREATE TABLE IF NOT EXISTS short_urls (
+    id INT AUTO_INCREMENT PRIMARY KEY,                 -- ID único para cada URL encurtada, com incremento automático
+    code VARCHAR(10) NOT NULL UNIQUE,                  -- Código curto único gerado para a URL (máximo 10 caracteres)
+    original_url TEXT NOT NULL,                        -- URL original completa associada ao código
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP     -- Data e hora de criação do registro, padrão atual
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Comentários gerais:
 -- - `ENGINE=InnoDB`: Define o mecanismo de armazenamento como InnoDB, que oferece suporte a transações e integridade referencial.
--- - `DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`: Define a tabela para usar o charset UTF-8 com suporte a caracteres Unicode, permitindo o armazenamento de caracteres especiais e emojis.
+-- - `DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci`: Define o charset para UTF-8 com suporte a caracteres Unicode, permitindo armazenamento de caracteres especiais e emojis.

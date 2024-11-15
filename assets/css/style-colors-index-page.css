@@ -1,150 +1,182 @@
+/* ===================================================
+   Reset Básico
+   =================================================== */
+
 /* Reset básico para eliminar margens e espaçamentos padrões de todos os elementos */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove margens de todos os elementos */
+  padding: 0; /* Remove preenchimento interno de todos os elementos */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
 }
+
+/* ===================================================
+   Estilização do Corpo da Página
+   =================================================== */
 
 /* Configuração do corpo da página, com imagem de fundo e centralização do conteúdo */
 body {
-  background-image: url('../../assets/images/background-index-4.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  overflow-x: hidden;
+  background-image: url('../../assets/images/background-index-4.jpg'); /* Define a imagem de fundo */
+  background-size: cover; /* A imagem cobre toda a área visível */
+  background-position: center; /* Centraliza a imagem no corpo */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
+  display: flex; /* Usa flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  min-height: 50vh; /* Altura mínima de 50% da altura da janela */
+  overflow-x: hidden; /* Remove a barra de rolagem horizontal */
 }
 
 /* Sobreposição sutil para ajustar o contraste e brilho da imagem de fundo */
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: -1;
-  filter: contrast(1.1) brightness(1.1) saturate(1.1);
+  content: ""; /* Cria um pseudo-elemento vazio */
+  position: fixed; /* Fixa o elemento na tela */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total da tela */
+  height: 100%; /* Altura total da tela */
+  background: rgba(0, 0, 0, 0.1); /* Define uma camada semitransparente */
+  z-index: -1; /* Coloca a camada atrás do conteúdo principal */
+  filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Ajusta contraste, brilho e saturação */
 }
 
-/* Container principal, ajustado para centralizar o conteúdo e definir o layout */
+/* ===================================================
+   Container Principal
+   =================================================== */
+
+/* Configuração do container principal */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%; /* Largura total */
+  max-width: 1200px; /* Largura máxima de 1200px */
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
 }
 
-/* Estilização do logo, definindo fonte, cor e sombra */
+/* ===================================================
+   Estilização do Logo e Subtítulo
+   =================================================== */
+
+/* Estilização do logo principal */
 #logo-page {
-  color: #ffffff;
-  font-size: 3.5rem;
-  font-family: "Reddit Sans Condensed", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* Cor branca para o texto */
+  font-size: 3.5rem; /* Tamanho grande da fonte */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Negrito */
+  text-align: center; /* Centraliza o texto */
+  cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+  margin-bottom: 0.5rem; /* Margem inferior */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil no texto */
 }
 
-/* Estilização do subtítulo abaixo do logo, com borda e sombreamento */
+/* Estilização do subtítulo abaixo do logo */
 #sub-logo-page {
-  font-family: "Reddit Sans Condensed", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 450;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #ffffff;
-  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-  margin-bottom: 1rem;
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-size: 1.2rem; /* Tamanho médio da fonte */
+  font-weight: 450; /* Peso médio da fonte */
+  color: #ffffff; /* Cor branca para o texto */
+  text-align: center; /* Centraliza o texto */
+  cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+  padding-bottom: 0.5rem; /* Preenchimento inferior */
+  border-bottom: 2px solid #ffffff; /* Borda inferior branca */
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil no texto */
+  margin-bottom: 1rem; /* Margem inferior */
 }
 
-/* Configuração da linha de caixas de informações, ajustável para múltiplos tamanhos de tela */
+/* ===================================================
+   Configuração da Linha de Caixas de Informação
+   =================================================== */
+
+/* Configuração da linha que contém as caixas de informação */
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
-  width: 100%;
-  padding: 0;
-  border-radius: 15px;
-  margin-top: 1rem;
-  background: transparent;
-  backdrop-filter: blur(1px) saturate(100%);
+  display: flex; /* Usa flexbox para layout */
+  flex-wrap: wrap; /* Permite que itens "quebrem" para uma nova linha em telas menores */
+  justify-content: space-around; /* Espaça os itens de forma uniforme */
+  gap: 2rem; /* Espaçamento entre os itens */
+  width: 100%; /* Largura total */
+  padding: 0; /* Remove qualquer preenchimento */
+  border-radius: 15px; /* Bordas arredondadas */
+  margin-top: 1rem; /* Margem superior */
+  background: transparent; /* Fundo transparente */
+  backdrop-filter: blur(1px) saturate(100%); /* Adiciona desfoque e saturação */
 }
 
-/* Configuração do layout das caixas de informação, com sombra e efeito hover */
+/* ===================================================
+   Estilização das Caixas de Informação
+   =================================================== */
+
+/* Configuração das caixas de informação */
 #box-info-page {
-  flex: 1 1 100%; /* Ajusta o flex para que as caixas ocupem toda a largura disponível */
-  background-color: #ffffff;
-  color: #47476b;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  border: 1px solid #47476b;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background-color 0.5s ease, color 0.5s ease;
-  max-width: 100%; /* Limita a largura máxima para garantir responsividade em zoom elevado */
+  flex: 1 1 100%; /* Cada caixa ocupa toda a largura disponível */
+  background-color: #ffffff; /* Fundo branco */
+  color: #47476b; /* Cor do texto */
+  padding: 2rem; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+  border: 1px solid #47476b; /* Borda sólida */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+  transition: transform 0.3s ease, background-color 0.5s ease, color 0.5s ease; /* Transições suaves */
+  max-width: 100%; /* Largura máxima para responsividade */
 }
 
+/* Estilização ao passar o mouse sobre as caixas */
 #box-info-page:hover {
-  background-color: #f2f2f2;
-  transform: scale(1.03);
-  cursor: pointer;
-  border: 1px solid #47476b;
+  background-color: #f2f2f2; /* Fundo cinza claro */
+  transform: scale(1.03); /* Aumenta ligeiramente o tamanho */
+  cursor: pointer; /* Mostra o cursor de ponteiro */
+  border: 1px solid #47476b; /* Realça a borda */
 }
 
-/* Estilo do título das caixas */
+/* Estilização do título dentro das caixas */
 #title-box-page {
-  text-align: center;
-  font-size: 1.4rem;
-  font-family: "Reddit Sans Condensed", sans-serif;
-  font-weight: bold;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #47476b;
+  text-align: center; /* Centraliza o título */
+  font-size: 1.4rem; /* Tamanho grande da fonte */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: bold; /* Negrito */
+  padding: 1rem; /* Espaçamento interno inferior */
+  margin-bottom: 1rem; /* Margem inferior */
+  border-bottom: 2px solid #47476b; /* Borda inferior */
 }
 
-/* Estilo do texto dentro das caixas de informação */
+/* Estilo do texto dentro das caixas */
 #text-box-page {
-  text-align: justify;
-  font-size: 1.1rem;
-  font-family: "Reddit Sans Condensed", sans-serif;
-  font-weight: 600;
-  margin-top: 1rem;
+  text-align: justify; /* Justifica o texto */
+  font-size: 1.1rem; /* Tamanho médio da fonte */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: 600; /* Peso médio */
+  margin-top: 1rem; /* Margem superior */
 }
 
-/* Estilo do botão nas caixas de informação */
+/* Configuração do botão dentro das caixas */
 #btn-box-page {
-  padding: 0.5rem;
-  width: 70%;
-  max-width: 250px;
-  font-family: "Reddit Sans Condensed", sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #47476b;
-  margin-top: 2rem;
-  background-color: transparent;
-  border: 1px solid #47476b;
-  border-radius: 4px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.7s ease, transform 0.7s ease;
+  padding: 0.5rem; /* Espaçamento interno */
+  width: 70%; /* Largura do botão */
+  max-width: 250px; /* Largura máxima */
+  font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+  font-weight: 600; /* Peso médio */
+  font-size: 1.1rem; /* Tamanho médio da fonte */
+  color: #47476b; /* Cor do texto */
+  margin-top: 2rem; /* Margem superior */
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #47476b; /* Borda sólida */
+  border-radius: 4px; /* Bordas arredondadas */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+  transition: background-color 0.7s ease, transform 0.7s ease; /* Transições suaves */
 }
 
+/* Estilização do botão ao passar o mouse */
 #btn-box-page:hover {
-  background-color: #3399ff;
-  color: #ffffff;
-  border: 1px solid #3399ff;
+  background-color: #3399ff; /* Fundo azul */
+  color: #ffffff; /* Texto branco */
+  border: 1px solid #3399ff; /* Borda azul */
 }
+
+/* ===================================================
+   Configurações de Responsividade
+   =================================================== */
+
+/* Configurações de estilos responsivos seguem a mesma lógica explicativa */
 
 /* Responsividade para dispositivos grandes (desktops grandes) - largura mínima de 1200px */
 @media (min-width: 1200px) {

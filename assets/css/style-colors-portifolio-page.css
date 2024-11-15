@@ -1,9 +1,17 @@
+/* ===================================================
+   Reset Básico
+   =================================================== */
+
 /* Reseta as margens e o preenchimento de todos os elementos */
 * {
     margin: 0; /* Remove margens */
     padding: 0; /* Remove preenchimentos */
     box-sizing: border-box; /* Inclui o preenchimento e borda dentro do tamanho do elemento */
 }
+
+/* ===================================================
+   Estilização do Corpo da Página
+   =================================================== */
 
 /* Estiliza o corpo da página */
 body {
@@ -32,6 +40,10 @@ body::before {
     filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Ajusta o contraste, brilho e saturação */
 }
 
+/* ===================================================
+   Container Principal
+   =================================================== */
+
 /* Estiliza o contêiner principal */
 .container {
     width: 100%; /* Largura total */
@@ -39,92 +51,112 @@ body::before {
     padding: 1rem; /* Preenchimento de 1rem */
     display: flex; /* Exibe como flexbox */
     flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Alinha os itens à esquerda */
+    align-items: center; /* Alinha os itens ao centro */
     text-align: left; /* Define o alinhamento do texto para a esquerda */
 }
 
+/* ===================================================
+   Estilização do Logo e Subtítulo
+   =================================================== */
+
 /* Estilo do logo principal */
 #logo-page {
-    color: #ffffff;
-    font-size: 3.5rem;
-    font-family: "Reddit Sans Condensed", sans-serif;
-    font-weight: bold;
-    text-align: left;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Cor branca para o texto */
+    font-size: 3.5rem; /* Tamanho grande da fonte */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: bold; /* Peso em negrito */
+    text-align: left; /* Alinha o texto à esquerda */
+    cursor: pointer; /* Altera o cursor para pointer */
+    margin-bottom: 0.5rem; /* Margem inferior */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
 }
 
-/* Estilização do subtítulo abaixo do logo, com borda e sombreamento */
+/* Estilização do subtítulo abaixo do logo */
 #sub-logo-page {
-    font-family: "Reddit Sans Condensed", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 450;
-    color: #ffffff;
-    text-align: left;
-    cursor: pointer;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #ffffff;
-    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 2rem;
-    text-wrap: nowrap;
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-size: 1.2rem; /* Tamanho médio da fonte */
+    font-weight: 450; /* Peso médio */
+    color: #ffffff; /* Cor branca para o texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    cursor: pointer; /* Altera o cursor para pointer */
+    padding-bottom: 0.5rem; /* Preenchimento inferior */
+    border-bottom: 2px solid #ffffff; /* Adiciona borda inferior branca */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
+    margin-bottom: 2rem; /* Margem inferior */
+    text-wrap: nowrap; /* Impede quebra de linha */
 }
+
+/* ===================================================
+   Estilização de Títulos
+   =================================================== */
 
 /* Estiliza os títulos de nível 3 */
 h3 {
-    font-family: "Reddit Sans Condensed", sans-serif; /* Família da fonte */
-    font-weight: 450; /* Peso da fonte */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #730099; /* Cor do texto roxo */
-    text-align: center; /* Alinha o texto ao centro */
-    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 450; /* Peso médio */
+    font-size: 1.5rem; /* Tamanho médio da fonte */
+    color: #730099; /* Cor roxa */
+    text-align: center; /* Centraliza o texto */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
 }
+
+/* ===================================================
+   Estilização de Grid do Portfólio
+   =================================================== */
 
 /* Estiliza o portfólio como uma grid */
 .box-portifolio {
-    display: grid; /* Usa grid para exibir os itens */
-    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas */
-    gap: 0.2rem; /* Espaço entre os itens */
+    display: grid; /* Exibe o conteúdo como grid */
+    grid-template-columns: repeat(4, 1fr); /* Divide em 4 colunas iguais */
+    gap: 0.2rem; /* Espaçamento entre os itens */
     width: 100%; /* Largura total */
-    padding: 2.5rem; /* Preenchimento */
-    text-align: center; /* Alinha o texto no centro */
-    border-radius: 10px; /* Arredonda as bordas */
-    background:rgba(255, 255, 255, 0.3); /* Sombra do texto */
+    padding: 2.5rem; /* Preenchimento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    background: rgba(255, 255, 255, 0.3); /* Fundo branco translúcido */
     backdrop-filter: blur(25px) saturate(100%); /* Efeito de desfoque e saturação */
-    justify-items: center; /* Alinha os itens ao centro */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra do texto */
+    justify-items: center; /* Centraliza os itens no grid */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao grid */
 }
+
+/* ===================================================
+   Estilização de Botões
+   =================================================== */
 
 /* Estiliza o botão do portfólio */
 .btn-box-portifolio {
-    background-color: #fefefe; /* Cor de fundo do botão */
+    background-color: #fefefe; /* Fundo branco */
     color: #47476b; /* Cor do texto */
-    outline: none; /* Remove o contorno */
-    padding: 1rem; /* Preenchimento do botão */
-    font-family: "Reddit Sans Condensed", sans-serif; /* Família da fonte */
-    font-weight: bold; /* Peso da fonte */
-    font-size: 1.05rem; /* Tamanho da fonte */
-    border-radius: 5px; /* Borda arredondada */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
-    transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease; /* Efeito de transição */
-    width: 80%;
-    max-width: 80%;
-    margin: 0.5rem auto; /* Margem automática */
+    outline: none; /* Remove contorno */
+    padding: 1rem; /* Preenchimento interno */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: bold; /* Peso em negrito */
+    font-size: 1.05rem; /* Tamanho médio da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
+    transition: background-color 0.7s ease, color 0.7s ease, transform 0.7s ease; /* Transições suaves */
+    width: 80%; /* Largura proporcional */
+    max-width: 80%; /* Limita largura máxima */
+    margin: 0.5rem auto; /* Margem automática para centralizar */
 }
 
 /* Estiliza o botão ao passar o mouse */
 .btn-box-portifolio:hover {
-    background-color: #3399ff; /* Cor de fundo ao passar o mouse */
-    cursor: pointer; /* Cursor de ponteiro */
-    color: #ffffff; /* Cor do texto ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o tamanho do botão */
+    background-color: #3399ff; /* Fundo azul */
+    cursor: pointer; /* Altera o cursor para pointer */
+    color: #ffffff; /* Cor do texto branco */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
 }
+
+/* ===================================================
+   Estilização de Modal
+   =================================================== */
 
 /* Estilos para o modal */
 .modal {
-    display: none; /* Inicialmente o modal está oculto */
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1; /* Define a ordem de empilhamento */
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixo na tela */
+    z-index: 1; /* Camada superior */
     left: 0; /* Alinha à esquerda */
     top: 0; /* Alinha ao topo */
     width: 100vw; /* Largura total da viewport */
@@ -135,168 +167,93 @@ h3 {
 
 /* Estilo do conteúdo do modal */
 .modal-content {
-    background-color: #ffffff; /* Cor de fundo do conteúdo */
-    margin: 10% auto; /* Margem automática e afastada do topo */
-    padding: 20px; /* Preenchimento */
-    border: 1px solid #888; /* Borda */
+    background-color: #ffffff; /* Fundo branco */
+    margin: 10% auto; /* Margem automática para centralizar */
+    padding: 20px; /* Preenchimento interno */
+    border: 1px solid #888; /* Borda sólida */
     width: 100%; /* Largura total */
     max-width: 650px; /* Largura máxima */
 }
 
 /* Estilo para o botão de fechar do modal */
 .close {
-    color: #ff0066; /* Cor do texto */
+    color: #ff0066; /* Cor rosa */
     float: right; /* Alinha à direita */
-    font-size: 20px; /* Tamanho da fonte */
-    font-weight: bold; /* Fonte em negrito */
-    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 20px; /* Tamanho grande */
+    font-weight: bold; /* Peso em negrito */
+    cursor: pointer; /* Altera o cursor para pointer */
 }
 
-/* Estiliza os títulos de nível 4 */
-h4 {
-    color: #47476b; /* Cor do texto */
-    font-family: "Reddit Sans Condensed", sans-serif; /* Família da fonte */
-    font-weight: 450; /* Peso da fonte */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    text-align: center; /* Alinha ao centro */
-    padding-bottom: 1rem; /* Preenchimento inferior */
-}
-
-/* Estiliza os títulos de nível 5 */
-h5 {
-    color: #3d3d5c; /* Cor do texto */
-    font-family: "Reddit Sans Condensed", sans-serif; /* Família da fonte */
-    font-weight: 450; /* Peso da fonte */
-    padding-top: 1rem; /* Preenchimento superior */
-    padding-bottom: 0.5rem; /* Preenchimento inferior */
-    border-bottom: 2px solid #ff0066; /* Borda inferior */
-}
-
-/* Estiliza os parágrafos */
-p {
-    color: #3d3d5c; /* Cor do texto */
-    font-family: "Reddit Sans Condensed", sans-serif; /* Família da fonte */
-    font-weight: 450; /* Peso da fonte */
-    font-size: 1.1rem; /* Tamanho da fonte */
-    text-align: justify; /* Alinha o texto de forma justificada */
-}
-
-/* Estiliza listas não ordenadas */
-ul {
-    list-style-type: none; /* Remove os marcadores de lista */
-    padding: 0; /* Remove o preenchimento padrão da lista */
-    margin: 0; /* Remove a margem padrão da lista */
-    display: flex; /* Aplica um layout flexível para os itens da lista */
-    justify-content: left; /* Alinha os itens da lista à esquerda */
-}
-
-/* Estiliza os itens da lista */
-li {
-    color: #3d3d5c; /* Define a cor do texto dos itens */
-    font-family: "Reddit Sans Condensed", sans-serif; /* Define a fonte para os itens da lista */
-    font-weight: 500; /* Define o peso da fonte (normal) */
-    font-size: 1rem; /* Define o tamanho da fonte */
-    border-bottom: 2px solid #ff0066; /* Adiciona uma borda na parte inferior dos itens */
-    margin: 0 5px; /* Adiciona espaçamento horizontal entre os itens */
-}
-
-/* Estiliza elementos de vídeo */
-video {
-    width: 100%; /* Faz com que o vídeo ocupe toda a largura disponível */
-    max-width: 80%; /* Limita a largura máxima do vídeo a 80% */
-    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
-    display: block; /* Faz com que o vídeo seja exibido como um bloco */
-    margin: -0.2rem auto; /* Adiciona uma margem negativa no topo e um auto para centralizar */
-}
+/* ===================================================
+   Responsividade
+   =================================================== */
 
 /* Responsividade para dispositivos grandes (desktops grandes) - largura mínima de 1200px */
 @media (min-width: 1200px) {
     #logo-page {
-        font-size: 3.5rem; /* Aumenta o tamanho da fonte do logo */
+        font-size: 3.5rem; /* Tamanho maior para logo */
     }
     #sub-logo-page {
-        font-size: 1.2rem; /* Ajusta o tamanho da fonte do subtítulo */
+        font-size: 1.2rem; /* Ajusta subtítulo */
     }
 }
 
 /* Para desktops - largura máxima de 1199px e mínima de 992px */
 @media (max-width: 1199px) and (min-width: 992px) {
     #logo-page {
-        font-size: 3rem; /* Ajusta o tamanho da fonte do logo */
+        font-size: 3rem; /* Reduz tamanho do logo */
     }
     #sub-logo-page {
-        font-size: 1.1rem; /* Ajusta o tamanho da fonte do subtítulo */
+        font-size: 1.1rem; /* Ajusta subtítulo */
     }
 }
 
 /* Para tablets e dispositivos médios - largura máxima de 991px e mínima de 768px */
 @media (max-width: 991px) and (min-width: 768px) {
     #logo-page {
-        font-size: 2.5rem; /* Ajusta o tamanho da fonte do logo */
+        font-size: 2.5rem; /* Ajusta tamanho do logo */
         text-align: center; /* Centraliza o logo */
     }
-    #sub-logo-page {
-        font-size: 1rem; /* Ajusta o tamanho da fonte do subtítulo */
-        text-align: center; /* Centraliza o subtítulo */
-    }
     .box-portifolio {
-        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas em dispositivos médios */
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas */
     }
 }
 
 /* Para telas pequenas, como celulares - largura máxima de 767px */
 @media (max-width: 767px) {
-    .container{
-        align-items: center;
-        text-align: center;
-    }
-    #logo-page {
-        font-size: 2rem; /* Ajusta o tamanho da fonte do logo */
-        text-align: center; /* Centraliza o logo */
-    }
-    #sub-logo-page {
-        font-size: 0.9rem; /* Ajusta o tamanho da fonte do subtítulo */
-        text-align: center; /* Centraliza o subtítulo */
-    }
     .box-portifolio {
-        grid-template-columns: repeat(3, 1fr); /* Ajusta para 2 colunas em dispositivos pequenos */
-    }
-    .btn-box-portifolio {
-        font-size: 0.9rem; /* Reduz o tamanho do texto do botão em telas pequenas */
-        padding: 0.8rem; /* Ajusta o preenchimento do botão */
-    }
-}
-
-/* Para telas menores que 575px */
-@media (max-width: 575px) {
-    #logo-page {
-        font-size: 1.8rem; /* Ajusta o tamanho da fonte do logo */
-        text-align: center; /* Centraliza o logo */
-    }
-    #sub-logo-page {
-        font-size: 0.9rem; /* Ajusta o tamanho da fonte do subtítulo */
-        text-align: center; /* Centraliza o subtítulo */
-    }
-    .modal-content {
-        width: 90%; /* Ajusta a largura do modal para caber melhor em telas pequenas */
-        margin: 20% auto; /* Ajusta a margem para manter o modal centrado */
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas */
     }
 }
 
 /* Para telas muito pequenas, como celulares antigos - largura máxima de 359px */
 @media (max-width: 359px) {
+    .container {
+        padding: 0.8rem; /* Ajusta o preenchimento */
+        align-items: center; /* Centraliza o conteúdo */
+    }
     #logo-page {
-        font-size: 1.5rem; /* Ajusta o tamanho da fonte do logo para telas menores */
+        font-size: 1.5rem; /* Ajusta tamanho do logo */
         text-align: center; /* Centraliza o logo */
     }
     #sub-logo-page {
-        font-size: 0.7rem; /* Ajusta o tamanho da fonte do subtítulo para telas pequenas */
+        font-size: 0.7rem; /* Ajusta tamanho do subtítulo */
         text-align: center; /* Centraliza o subtítulo */
     }
-    h3, h4, h5 {
-        font-size: 1rem; /* Reduz o tamanho dos títulos para melhor visualização em telas muito pequenas */
+    .box-portifolio {
+        grid-template-columns: repeat(1, 1fr); /* Ajusta para 1 coluna */
+        gap: 0.5rem; /* Ajusta o espaçamento */
+    }
+    .btn-box-portifolio {
+        font-size: 0.85rem; /* Reduz o tamanho do botão */
+        padding: 0.7rem; /* Ajusta o preenchimento do botão */
     }
     p {
-        font-size: 0.9rem; /* Reduz o tamanho do texto dos parágrafos */
+        font-size: 0.8rem; /* Reduz tamanho do texto dos parágrafos */
+    }
+    .modal-content {
+        padding: 10px; /* Ajusta o preenchimento do modal */
+        margin: 15% auto; /* Ajusta a margem do modal */
+        width: 90%; /* Ajusta a largura para telas menores */
     }
 }

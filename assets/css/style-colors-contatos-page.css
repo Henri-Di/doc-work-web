@@ -19,7 +19,7 @@ body {
   display: flex; /* Flexbox para centralizar conteúdo */
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza o conteúdo verticalmente */
-  min-height: 50vh; /* Altura mínima de 40% da altura da janela */
+  min-height: 50vh; /* Altura mínima de 50% da altura da janela */
   overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
@@ -40,36 +40,39 @@ body::before {
    Container Principal
    =================================================== */
 
+/* Configurações do container principal para centralização e organização dos elementos */
 .container {
   width: 90%; /* A largura do container será 90% da largura da tela */
   max-width: 1200px; /* Limita a largura máxima do container */
   padding: 2rem; /* Preenchimento interno de 2rem */
   display: flex; /* Usa flexbox para o layout */
   flex-direction: column; /* Organiza os itens em coluna */
-  align-items: center; /* Alinha os itens à esquerda */
+  align-items: center; /* Alinha os itens ao centro */
 }
 
 /* ===================================================
    Estilização do Logo e Subtítulo
    =================================================== */
 
+/* Estilo do logo principal */
 #logo-page {
   color: #ffffff; /* Cor do logo */
   font-size: 3.5rem; /* Tamanho da fonte do logo */
   font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
   font-weight: bold; /* Peso em negrito */
-  text-align: center; /* Alinhamento à esquerda */
+  text-align: center; /* Centraliza o texto */
   cursor: pointer; /* Cursor de ponteiro para interatividade */
   margin-bottom: 0.5rem; /* Margem inferior */
   text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra no texto */
 }
 
+/* Estilo do subtítulo */
 #sub-logo-page {
   font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
   font-size: 1.2rem; /* Tamanho da fonte */
   font-weight: 450; /* Peso médio */
   color: #ffffff; /* Cor do texto */
-  text-align: center; /* Alinhamento à esquerda */
+  text-align: center; /* Centraliza o texto */
   cursor: pointer; /* Cursor de ponteiro */
   padding-bottom: 0.5rem; /* Preenchimento inferior */
   border-bottom: 2px solid #ffffff; /* Borda inferior */
@@ -81,6 +84,7 @@ body::before {
    Configuração da Linha de Caixas de Informação
    =================================================== */
 
+/* Configuração das linhas que contêm as caixas de informação */
 .row {
   display: flex; /* Flexbox para layout das caixas */
   flex-wrap: wrap; /* Permite que itens "quebrem" para próxima linha em telas menores */
@@ -98,6 +102,7 @@ body::before {
    Configuração das Caixas de Informação
    =================================================== */
 
+/* Estilo das caixas de informação individuais */
 #box-info-page {
   flex: 1 1 10%; /* Cada caixa ocupa 10% da largura disponível */
   background-color: #ffffff; /* Fundo branco */
@@ -109,6 +114,7 @@ body::before {
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.7s ease; /* Transição suave para interações */
 }
 
+/* Estilo para interação no hover */
 #box-info-page:hover {
   background-color: #f2f2f2; /* Fundo cinza claro no hover */
   cursor: pointer; /* Cursor de ponteiro */
@@ -120,6 +126,7 @@ body::before {
    Estilo do Título das Caixas de Informação
    =================================================== */
 
+/* Estilo dos títulos das caixas */
 h4 {
   font-size: 1.5rem; /* Tamanho da fonte */
   font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
@@ -131,6 +138,7 @@ h4 {
    Estilo para Ícones de Contato
    =================================================== */
 
+/* Estilo para ícones de contato */
 #icon-contatos-page {
   font-size: 3.5rem; /* Tamanho do ícone */
 }
@@ -139,7 +147,7 @@ h4 {
    Configurações de Responsividade
    =================================================== */
 
-/* Dispositivos grandes - largura mínima de 1200px */
+/* Estilo para dispositivos grandes - largura mínima de 1200px */
 @media (min-width: 1200px) {
   #logo-page {
     font-size: 3.5rem; /* Fonte grande */
@@ -158,7 +166,7 @@ h4 {
   }
 }
 
-/* Desktops médios - largura entre 992px e 1199px */
+/* Estilo para desktops médios - largura entre 992px e 1199px */
 @media (max-width: 1199px) and (min-width: 992px) {
   #logo-page {
     font-size: 3rem;
@@ -178,7 +186,7 @@ h4 {
   }
 }
 
-/* Tablets e dispositivos médios - largura entre 768px e 991px */
+/* Estilo para tablets e dispositivos médios - largura entre 768px e 991px */
 @media (max-width: 991px) and (min-width: 768px) {
   #logo-page {
     font-size: 2.5rem;
@@ -201,7 +209,7 @@ h4 {
   }
 }
 
-/* Telas pequenas, como celulares - largura máxima de 767px */
+/* Estilo para telas pequenas, como celulares - largura máxima de 767px */
 @media (max-width: 767px) {
   .container {
     align-items: center;
@@ -228,7 +236,7 @@ h4 {
   }
 }
 
-/* Telas menores que 575px */
+/* Estilo para telas menores que 575px */
 @media (max-width: 575px) {
   #logo-page {
     font-size: 1.8rem;
@@ -251,7 +259,7 @@ h4 {
   }
 }
 
-/* Telas extremamente pequenas - largura máxima de 359px */
+/* Estilo para telas extremamente pequenas - largura máxima de 359px */
 @media (max-width: 359px) {
   #logo-page {
     font-size: 1.5rem;
