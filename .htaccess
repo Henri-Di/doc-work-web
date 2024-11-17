@@ -1,6 +1,103 @@
+# Ativa o mecanismo de reescrita de URL
 RewriteEngine On
 
-# Redireciona tudo que não seja um arquivo ou diretório para o index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?code=$1 [QSA,L]
+# ------------------------------------------------------------------------------
+# Segurança Básica
+# ------------------------------------------------------------------------------
+
+# Desabilita a listagem de diretórios para evitar que os usuários vejam o conteúdo dos diretórios
+Options -Indexes
+
+# Restringe o acesso a arquivos sensíveis (htaccess, htpasswd, .env, etc.)
+<FilesMatch "(\.htaccess|\.htpasswd|\.env|\.git|\.svn|\.bak|\.old|\.ini|\.log|\.sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Evita que os navegadores armazenem em cache informações sensíveis
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Proteções Contra Ataques
+# ------------------------------------------------------------------------------
+
+# Protege contra ataques XSS (Cross-site scripting) - configura o tipo de conteúdo correto
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Impede a inclusão de recursos fora do domínio (Clickjacking)
+Header always append X-Frame-Options SAMEORIGIN
+
+# Configura CORS (Cross-Origin Resource Sharing) para apenas permitir o acesso do mesmo domínio
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "same-origin"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Proteção Contra Métodos HTTP Perigosos
+# ------------------------------------------------------------------------------
+
+# Permite apenas os métodos HTTP GET, POST e OPTIONS
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|DELETE|PUT|CONNECT|OPTIONS|HEAD|PATCH)$ [NC]
+    RewriteRule .* - [F]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Limita o Tamanho Máximo de Upload
+# ------------------------------------------------------------------------------
+
+# Define o tamanho máximo de upload para evitar que usuários sobrecarreguem o servidor com arquivos grandes
+LimitRequestBody 10485760  # 10MB
+
+# ------------------------------------------------------------------------------
+# Proteção Contra Hotlinking de Imagens
+# ------------------------------------------------------------------------------
+
+# Evita que outros sites utilizem suas imagens sem permissão (hotlinking)
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://(www\.)?matheusdiamantino\.com [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|bmp)$ - [F,NC]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Proteção Contra Injeção de Código
+# ------------------------------------------------------------------------------
+
+# Bloqueia tentativas de injeção de código malicioso na URL
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*embed.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\<|%3C).*object.*(\>|%3E) [NC]
+    RewriteRule .* - [F]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Proteção Contra Scan de Arquivos
+# ------------------------------------------------------------------------------
+
+# Bloqueia scanners que buscam arquivos vulneráveis ou expostos
+RewriteCond %{REQUEST_URI} ^/(phpinfo|\.ini|\.log|\.ht) [NC]
+RewriteRule .* - [F,L]
+
+# ------------------------------------------------------------------------------
+# Configurações Adicionais de Segurança
+# ------------------------------------------------------------------------------
+
+# Define um valor padrão seguro para o ServerSignature (oculta a versão do servidor)
+ServerSignature Off
+
+# Desabilita o ETag para evitar ataques de rastreamento
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None

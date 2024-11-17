@@ -1,0 +1,224 @@
+/* ===================================================
+   Reset de Estilos e Configuração Básica do Body
+   =================================================== */
+
+/* Reseta as margens e o preenchimento de todos os elementos */
+* {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    box-sizing: border-box; /* Inclui o preenchimento e borda no tamanho total do elemento */
+}
+
+/* Estiliza o corpo da página com imagem de fundo */
+body {
+    background-image: url('../../assets/images/background-index-4.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área visível */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-attachment: fixed; /* A imagem de fundo permanece fixa ao rolar */
+    background-repeat: no-repeat; /* Impede repetição da imagem de fundo */
+    display: flex; /* Exibe o conteúdo como flexbox */
+    justify-content: center; /* Alinha o conteúdo no centro horizontalmente */
+    align-items: center; /* Alinha o conteúdo no centro verticalmente */
+    min-height: 50vh; /* Define altura mínima como 40% da altura da viewport */
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Sobreposição sutil para ajustar contraste e brilho da imagem de fundo */
+body::before {
+    content: ""; /* Cria um pseudo-elemento vazio */
+    position: fixed; /* Posição fixa */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+    filter: contrast(1.1) brightness(1.1) saturate(1.1); /* Ajusta contraste, brilho e saturação */
+}
+
+/* ===================================================
+   Configuração do Container Principal
+   =================================================== */
+
+.container {
+    width: 90%; /* Largura total do container */
+    max-width: 1200px; /* Largura máxima do container */
+    padding: 2rem; /* Preenchimento interno de 2rem */
+    display: flex; /* Exibe o conteúdo como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens à esquerda */
+    text-align: center; /* Alinhamento do texto à esquerda */
+}
+
+/* ===================================================
+   Estilização do Logo e Subtítulo
+   =================================================== */
+
+#logo-page {
+    color: #ffffff; /* Cor do texto para branco */
+    font-size: 3.5rem; /* Tamanho da fonte do logo */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: bold; /* Peso da fonte em negrito */
+    text-align: center; /* Alinhamento à esquerda */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    margin-bottom: 0.5rem; /* Margem inferior */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+}
+
+#sub-logo-page {
+    font-size: 1.2rem; /* Tamanho da fonte do subtítulo */
+    font-weight: 400; /* Peso normal */
+    color: #ffffff; /* Cor do texto branco */
+    text-align: center; /* Alinhamento à esquerda */
+    cursor: pointer; /* Cursor de ponteiro */
+    padding-bottom: 0.5rem; /* Preenchimento inferior */
+    border-bottom: 2px solid #ffffff; /* Borda inferior branca */
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    margin-bottom: 2rem; /* Margem inferior */
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+/* ===================================================
+   Estilo da Linha de Itens (Row) e Caixas de Informações
+   =================================================== */
+
+.row {
+    display: flex; /* Exibe o conteúdo como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 0rem; /* Espaçamento entre os itens */
+    width: 70%; /* Largura total */
+    padding: 5rem; /* Preenchimento interno */
+    overflow: hidden; /* Impede transbordamento */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+}
+
+/* ===================================================
+   Estilização de Títulos e Parágrafos nas Caixas
+   =================================================== */
+h1{
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 600; /* Peso médio */
+    font-size: 3.05rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    cursor: pointer;
+}
+
+h4 {
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso médio */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    padding-top: 0.5rem; /* Preenchimento superior */
+    padding-bottom: 0.5rem; /* Preenchimento inferior */
+    border-bottom: 2px solid #47476b; /* Borda inferior */
+}
+
+p {
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 450; /* Peso médio */
+    font-size: 1.3rem; /* Tamanho da fonte */
+    color: #47476b; /* Cor do texto */
+    text-align: justify; /* Alinhamento justificado */
+}
+
+/* ===================================================
+   Responsividade - Configurações para Diferentes Telas
+   =================================================== */
+
+/* Dispositivos grandes - largura mínima de 1200px */
+@media (min-width: 1200px) {
+    #logo-page {
+        font-size: 3.5rem; /* Aumenta o tamanho do logo */
+    }
+    #sub-logo-page {
+        font-size: 1.2rem; /* Ajusta o tamanho do subtítulo */
+    }
+    .row {
+        gap: 2rem; /* Espaçamento entre os itens na linha */
+    }
+}
+
+/* Desktops médios - largura entre 992px e 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    #logo-page {
+        font-size: 3rem; /* Ajusta o tamanho do logo */
+    }
+    #sub-logo-page {
+        font-size: 1.1rem; /* Ajusta o tamanho do subtítulo */
+    }
+    .row {
+        gap: 1.5rem; /* Espaçamento entre os itens na linha */
+    }
+}
+
+/* Tablets e dispositivos médios - largura entre 768px e 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    #logo-page {
+        font-size: 2.5rem; /* Ajusta o tamanho do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 1rem; /* Ajusta o tamanho do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    .row {
+        flex-direction: column; /* Exibe os itens da linha em coluna */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+}
+
+/* Telas pequenas, como celulares - largura máxima de 767px */
+@media (max-width: 767px) {
+    .container {
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+    }
+    #logo-page {
+        font-size: 2rem; /* Ajusta o tamanho do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Ajusta o tamanho do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    .row {
+        width: 100%;
+        flex-direction: column; /* Exibe os itens da linha em coluna */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+}
+
+/* Telas menores que 575px */
+@media (max-width: 575px) {
+    #logo-page {
+        font-size: 1.8rem; /* Ajusta o tamanho do logo */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.9rem; /* Ajusta o tamanho do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    .row {
+        flex-direction: column; /* Exibe os itens da linha em coluna */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+}
+
+/* Telas extremamente pequenas - largura máxima de 359px */
+@media (max-width: 359px) {
+    #logo-page {
+        font-size: 1.5rem; /* Ajusta o tamanho do logo para telas pequenas */
+        text-align: center; /* Centraliza o logo */
+    }
+    #sub-logo-page {
+        font-size: 0.7rem; /* Ajusta o tamanho do subtítulo */
+        text-align: center; /* Centraliza o subtítulo */
+    }
+    .row {
+        flex-direction: column; /* Exibe os itens da linha em coluna */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+}

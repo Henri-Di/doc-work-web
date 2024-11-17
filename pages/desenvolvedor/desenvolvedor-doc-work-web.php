@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include'../shortener/doc-work-web-create-short-url.php'; ?>
 <html lang="pt-BR">
     <!-- Início do cabeçalho do documento -->
     <header>

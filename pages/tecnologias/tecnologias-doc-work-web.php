@@ -58,13 +58,13 @@
 
         /* Animação para criar um efeito de arco-íris no loader */
         @keyframes rainbow {
-            0% { border-top-color: #ff0000; }    /* Vermelho */
-            16% { border-top-color: #ff7f00; }   /* Laranja */
-            33% { border-top-color: #ffff00; }   /* Amarelo */
-            50% { border-top-color: #00ff00; }   /* Verde */
-            66% { border-top-color: #0000ff; }   /* Azul */
-            83% { border-top-color: #4b0082; }   /* Anil */
-            100% { border-top-color: #8b00ff; }  /* Violeta */
+            0% { border-top-color: #8c1aff; }    
+            16% { border-top-color: #7300e6; }   
+            33% { border-top-color: #ac00e6; }  
+            50% { border-top-color: #9900cc; }  
+            66% { border-top-color: #8600b3; }   
+            83% { border-top-color: #4b0082; }   
+            100% { border-top-color: #8b00ff; }  
         }
     </style>
 </head>

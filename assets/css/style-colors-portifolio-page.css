@@ -93,11 +93,14 @@ body::before {
 /* Estiliza os títulos de nível 3 */
 h3 {
     font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
-    font-weight: 450; /* Peso médio */
-    font-size: 1.5rem; /* Tamanho médio da fonte */
-    color: #730099; /* Cor roxa */
+    font-weight: bold; /* Peso médio */
+    font-size: 2rem; /* Tamanho médio da fonte */
+    color: #ffffff; /* Cor branco */
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #3399ff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
     text-align: center; /* Centraliza o texto */
-    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
 }
 
 /* ===================================================
@@ -177,7 +180,7 @@ h3 {
 
 /* Estilo para o botão de fechar do modal */
 .close {
-    color: #ff0066; /* Cor rosa */
+    color: #3399ff; /* Cor rosa */
     float: right; /* Alinha à direita */
     font-size: 20px; /* Tamanho grande */
     font-weight: bold; /* Peso em negrito */
@@ -210,13 +213,21 @@ h5 {
 
 /* Estiliza os parágrafos */
 p {
-    color: #3d3d5c; /* Cor do texto */
+    color: #47476b; /* Cor do texto */
     font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
     font-weight: 450; /* Peso médio */
     font-size: 1.1rem; /* Tamanho médio da fonte */
     text-align: justify; /* Justifica o texto */
 }
 
+#text-construcao-projeto-web{
+    color: #47476b; /* Cor do texto */
+    font-family: "Reddit Sans Condensed", sans-serif; /* Fonte personalizada */
+    font-weight: 500; /* Peso médio */
+    font-size: 1.5rem; /* Tamanho médio da fonte */
+    text-align: center; /* Justifica o texto */
+}
+    
 /* ===================================================
    Estilização de Listas
    =================================================== */
