@@ -1,4 +1,4 @@
-🚀 Apresentando meu Portfólio Profissional! 🚀
+🚀 Apresentando meu Portfólio Profissional! 
 
 Estou animado em compartilhar com vocês o meu portfólio online, um espaço criado para mostrar não apenas meus projetos, mas também minha jornada como desenvolvedor web. A tecnologia tem o poder de transformar ideias em soluções práticas, e meu portfólio reflete essa visão. Aqui, você verá o compromisso com a excelência e inovação que me guia em cada projeto. E o melhor: o site é totalmente responsivo, oferecendo uma experiência fluida e adaptável a qualquer dispositivo, seja desktop, tablet ou celular.
 
